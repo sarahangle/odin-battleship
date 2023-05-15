@@ -13,6 +13,7 @@ class Gameboard {
 
   attacks = {};
 
+  // Returns true if ship is placed in valid location, false if ship could not be placed
   placeShip([startX, startY], isXDir, length) {
     for (let i = 0; i < length; i += 1) {
       if (isXDir && !this.shipSquareValid([startX + i, startY])) { return false; }
